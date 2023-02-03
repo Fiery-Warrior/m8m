@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^c#r%*daybh30%8e9c+wm$aze$o31l19mfxhc#b_=d+=^y5u0k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #set to false when making terminal app
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.example.com']
 
 
 # Application definition
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'hello',
     'newyear',
     'tasks',
-    #add each new app, aka project here
+    'web_terminal',
+    #add each new app, aka project here include , 'comma'
 
 ]
 
@@ -64,7 +65,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'myapp/templates'),
-            os.path.join(BASE_DIR , 'frontend/build') #for react
+            os.path.join(BASE_DIR , 'frontend/build'), #for react
+            os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {

@@ -30,7 +30,10 @@ urlpatterns = [
 
     path('tasks/', include('tasks.urls')),
 
-    path('', index) #if someone calls this empty route it will call the index function
+    path('', index), #if someone calls this empty route it will call the index function
+    
+    path('', include('web_terminal.urls')),    
+    
     #add additonal steps here
 
 #remember to put the comma ,
